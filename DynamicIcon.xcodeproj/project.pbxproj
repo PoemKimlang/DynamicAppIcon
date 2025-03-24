@@ -30,6 +30,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8A4B485B2D74432B001A9F31 /* Exceptions for "DynamicIcon" folder in "DynamicIconTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"AppIcon/ChristmasAppIcon@1x.png",
+			);
+			target = 8A9041C42D7354B300F29A66 /* DynamicIconTests */;
+		};
+		8A4B485C2D74432B001A9F31 /* Exceptions for "DynamicIcon" folder in "DynamicIconUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"AppIcon/ChristmasAppIcon@1x.png",
+			);
+			target = 8A9041CE2D7354B300F29A66 /* DynamicIconUITests */;
+		};
 		8A9041D72D7354B300F29A66 /* Exceptions for "DynamicIcon" folder in "DynamicIcon" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -44,6 +58,8 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				8A9041D72D7354B300F29A66 /* Exceptions for "DynamicIcon" folder in "DynamicIcon" target */,
+				8A4B485B2D74432B001A9F31 /* Exceptions for "DynamicIcon" folder in "DynamicIconTests" target */,
+				8A4B485C2D74432B001A9F31 /* Exceptions for "DynamicIcon" folder in "DynamicIconUITests" target */,
 			);
 			path = DynamicIcon;
 			sourceTree = "<group>";
@@ -289,6 +305,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62EMNW6G6D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DynamicIcon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -296,6 +313,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +334,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62EMNW6G6D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DynamicIcon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -323,6 +342,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
