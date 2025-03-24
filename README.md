@@ -117,8 +117,6 @@ To revert to the default app icon:
 setDynamicAppIcon(to: nil)
 ```
 
-## 📄 License
-[MIT License](LICENSE)
 
 ## 🙋‍♂️ Contributing
 Feel free to contribute by creating pull requests or raising issues.
