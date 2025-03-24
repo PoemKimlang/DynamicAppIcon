@@ -72,18 +72,32 @@ Edit your `Info.plist` with the following:
 
 ### Step 3: Change App Icon Programmatically (Swift)
 
-Use this Swift function to switch icons:
+Use this Swift function to switch icons with alert popup handling:
 
 ```swift
-func setAppIcon(to iconName: String?) {
-    guard UIApplication.shared.supportsAlternateIcons else { return }
+private func setDynamicAppIcon(to iconName: String?) {
+    guard #available(iOS 10.3, *),
+          UIApplication.shared.supportsAlternateIcons else {
+        print("⚠️ Alternate icons not supported on this device.")
+        return
+    }
 
-    UIApplication.shared.setAlternateIconName(iconName) { error in
-        if let error = error {
-            print("❌ Error setting icon: \(error.localizedDescription)")
-        } else {
-            let icon = iconName ?? "default icon"
-            print("🎉 Successfully changed icon to \(icon).")
+    if UIApplication.shared.alternateIconName == iconName {
+        print("✅ App icon is already set to \(iconName ?? \"default\"), no change needed.")
+        return
+    }
+
+    let blankViewController = UIViewController()
+    blankViewController.modalPresentationStyle = .custom
+
+    present(blankViewController, animated: false) { [weak self] in
+        UIApplication.shared.setAlternateIconName(iconName) { error in
+            if let error = error {
+                print("❌ Error setting icon: \(error.localizedDescription)")
+            } else {
+                print("🎉 Successfully changed icon to \(iconName ?? \"default\").")
+            }
+            self?.dismiss(animated: false, completion: nil)
         }
     }
 }
@@ -94,15 +108,17 @@ func setAppIcon(to iconName: String?) {
 To set the icon to `KhmerNewYearIcon`:
 
 ```swift
-setAppIcon(to: "KhmerNewYearIcon")
+setDynamicAppIcon(to: "KhmerNewYearIcon")
 ```
 
 To revert to the default app icon:
 
 ```swift
-setAppIcon(to: nil)
+setDynamicAppIcon(to: nil)
 ```
 
+## 📄 License
+[MIT License](LICENSE)
 
 ## 🙋‍♂️ Contributing
 Feel free to contribute by creating pull requests or raising issues.
